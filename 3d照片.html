@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false">
+ 
+<head>
+      <meta charset="UTF-8">
+      <meta name="Keywords" content="">
+      <meta name="Description" content="">
+      <title>3D旋转照片墙</title>
+      <!-- 如果我有天醒来 -->
+      <!-- 层叠样式表 -->
+      <style type="text/css">
+            /* 去掉默认效果 */
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+ 
+            body {
+                  background: #222;
+                  overflow: hidden;
+                  /* 取消选中 */
+                  user-select: none;
+ 
+            }
+ 
+            @keyframes rotate {
+                  100% {
+                        transform: rotateY(360deg);
+                  }
+            }
+ 
+            .perspective {
+                  /*子元素透视 场景深度*/
+                  perspective: 600px;
+            }
+ 
+            .wrap {
+                  /* 3d */
+                  width: 135px;
+                  height: 240px;
+                  margin: 100px auto;
+                  position: relative;
+                  /* border: 1px solid red; */
+                  transform: rotateX(-20deg) rotateY(0deg);
+                  transform-style: preserve-3d;
+ 
+            }
+ 
+            .wrap img {
+                  display: block;
+                  /* 绝对定位 */
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  transform: rotateY(0deg) translateZ(0px);
+                  background: transparent;
+                  box-shadow: 0 0 4px #fff;
+                  border-radius: 5px;
+ 
+                  /* webkit */
+            }
+ 
+            /* 照片底座 */
+            .wrap p {
+                  width: 1200px;
+                  height: 1200px;
+                  background: -webkit-radial-gradient(center center, 600px 600px, rgba(122, 122, 122, .5), rgba(0, 0, 0, 0));
+                  position: absolute;
+                  border-radius: 50%;
+                  left: 50%;
+                  top: 100%;
+                  margin-left: -600px;
+                  margin-top: -600px;
+                  /* 沿着x轴按倒 */
+                  transform: rotateX(90deg);
+ 
+            }
+      </style>
+</head>
+ 
+<body>
+      <!-- 盒子容器 -->
+      <div class="perspective">
+            <div class="wrap" id="imgwrap">
+                  <!-- 引入图片值页面 -->
+                  <img class="f1" src="../images/girlfriend/07675ADBD5BA98C41B1DA7AFF13FC855.jpg" />
+                  <img class="f1" src="../images/girlfriend/07EB316FB575AA5C2B9962F4AD70310B.jpg" />
+                  <img class="f1" src="../images/girlfriend/0A452A6131A801CB9415E3A437CBD25C.jpg" />
+                  <img class="f1" src="../images/girlfriend/0BCF446397966E1B223E140979C2C977.jpg" />
+                  <img class="f1" src="../images/girlfriend/0CBA66FBD4ED770D13F5DA987E0CDF20.jpg" />
+                  <img class="f1" src="../images/girlfriend/0CBC967061DED5B9E27407B931BAA363.jpg" />
+                  <img class="f1" src="../images/girlfriend/115BAC13BEB6A8F48E835B9B1B0C9E73.jpg" />
+                  <img class="f1" src="../images/girlfriend/117947A7BF58E8E5727D6AE7C713FC88.jpg" />
+                  <img class="f1" src="../images/girlfriend/11CBDF0E6EF1EBA57ED15D4869FD6330.jpg" />
+                  <img class="f1" src="../images/girlfriend/120D007C20F0030DD760B28E97CFBBB3.jpg" />
+                  <img class="f1" src="../images/girlfriend/16FABC0F6E922312AC93A1C705E2B387.jpg" />
+                  <img class="f1" src="../images/girlfriend/19C9E9C527FBEBF4293D8176889CD3CA.jpg" />
+                  <img class="f1" src="../images/girlfriend/1CBD36DC492A4DCF97E2383EAF9681E5.jpg" />
+                  <img class="f1" src="../images/girlfriend/2265A9299FF886DA5C330112D7F7F753.jpg" />
+                  <img class="f1" src="../images/girlfriend/26567F98AE932BEEB1F9DE8F85F52E7B.jpg" />
+                  <img class="f1" src="../images/girlfriend/3115531E2924FB1D66FB65CFDE1E7AB1.jpg" />
+                  <img class="f1" src="../images/girlfriend/322BD62460F45657B8A67016CDEF1B2B.jpg" />
+                  <img class="f1" src="../images/girlfriend/33DAFAD0DA00F5F55478622F5D7B3119.jpg" />
+                  <img class="f1" src="../images/girlfriend/35B0AFB6CEBC152C704F2810F9F58BF6.jpg" />
+ 
+                  <img class="f1" src="../images/girlfriend/35C372D589449F797B38620E5C0686D1.jpg" />
+                  <img class="f1" src="../images/girlfriend/395CAC1948A2EADADA5AAC8E0BACBD88.jpg" />
+                  <img class="f1" src="../images/girlfriend/3CBEC01E55ACADD145337640AB95520B.jpg" />
+                  <img class="f1" src="../images/girlfriend/3E50570E6F257C74277333CFF9F5D685.jpg" />
+                  <img class="f1" src="../images/girlfriend/3E6135E8FA5F873F50AD90B81F46CCB5.jpg" />
+                  <img class="f1" src="../images/girlfriend/41A18958BADE6727FEB6813A9BC1CFC5.jpg" />
+                  <img class="f1" src="../images/girlfriend/443550E30E54597B41638E2888076856.jpg" />
+                  <img class="f1" src="../images/girlfriend/46B486F34AC3DA9E43CBC3B9388C21A9.jpg" />
+                  <img class="f1" src="../images/girlfriend/476BBB03561D2BAEBEAE88D3ECC4A8DE.jpg" />
+                  <img class="f1" src="../images/girlfriend/4C40F514AF5A3B875180D04A1FD1B6C3.jpg" />
+                  <img class="f1" src="../images/girlfriend/56F1E91BB92F85169D72557D9493634F.jpg" />
+                  <img class="f1" src="../images/girlfriend/5749826A621C9415E35410990C31A30F.jpg" />
+                  <img class="f1" src="../images/girlfriend/5D5710892F0ACDFEE1F86D61503B3265.jpg" />
+                  <img class="f1" src="../images/girlfriend/66230063DB8B6798180884585F3C04EC.jpg" />
+ 
+                  <!-- 引入图片值页面 -->
+                  <img class="f2" src="../images/girlfriend/68576ACCC25546E2CF34AF5082B536B5.jpg" />
+                  <img class="f2" src="../images/girlfriend/6D906C49BA8844D86B0F66529E1E8800.jpg" />
+                  <img class="f2" src="../images/girlfriend/6DEEB6F7E426B117B788FE9CFE254179.jpg" />
+                  <img class="f2" src="../images/girlfriend/706DF93C7BB3DE7C39AB4F9C88FAA0E3.jpg" />
+                  <img class="f2" src="../images/girlfriend/73B2B95907D0E170C43F3D6277224030.jpg" />
+ 
+                  <img class="f2" src="../images/girlfriend/748E336CAF698557B1B196EDA22DECC8.jpg" />
+                  <img class="f2" src="../images/girlfriend/75F30C5918CE9C015DAC63879F23B563.jpg" />
+                  <img class="f2" src="../images/girlfriend/782FE36873EDC9264C2C0C5CD502F248.jpg" />
+                  <img class="f2" src="../images/girlfriend/7A50197919C2BC7306E27DBEE0C3CF59.jpg" />
+                  <img class="f2" src="../images/girlfriend/7A600B55862BFB7379478BFCE526FD10.jpg" />
+                  <img class="f2" src="../images/girlfriend/7C73ECE848E9F488687ED43CDA09509B.jpg" />
+                  <img class="f2" src="../images/girlfriend/84365F5EF0C04A1B260CD95DFD8C5252.jpg" />
+                  <img class="f2" src="../images/girlfriend/88A6FB76E439FDE4B57C099F72D854E8.jpg" />
+                  <img class="f2" src="../images/girlfriend/89D4D3C162DF28147A7E9284D24442F6.jpg" />
+                  <img class="f2" src="../images/girlfriend/8D906687C115AD72FB91086DEF1C6625.jpg" />
+                  <img class="f2" src="../images/girlfriend/8DA11BC12637BB3A44B15AC17122CB78.jpg" />
+                  <img class="f2" src="../images/girlfriend/96AB17B8669CAA81B921B768BBCA84A7.jpg" />
+                  <img class="f2" src="../images/girlfriend/9ED1AAB757D610BB515BD770D4E8298B.jpg" />
+                  <img class="f2" src="../images/girlfriend/A38614A0913A252B5FC151FEA08D72E1.jpg" />
+                  <img class="f2" src="../images/girlfriend/A48282A8969D58562FE6FC5C13B6E4A2.jpg" />
+                  <img class="f2" src="../images/girlfriend/A5F00F64C55C95FE24A1EA228CEDFB59.jpg" />
+                  <img class="f2" src="../images/girlfriend/A62AD036AE2FDE8215F09E48D581F5AE.jpg" />
+                  <img class="f2" src="../images/girlfriend/ABF9B864F0E25E954AA1CCCF725BECA4.jpg" />
+                  <img class="f2" src="../images/girlfriend/B010472DA0B035D38CED7AEE58F876B4.jpg" />
+                  <img class="f2" src="../images/girlfriend/B20A7207188268254B3858AD65A61EB7.jpg" />
+                  <img class="f2" src="../images/girlfriend/B295B419BA20B3340317A6CD2DA80CAA.jpg" />
+                  <img class="f2" src="../images/girlfriend/B3F1B9F9C1C3AE09A6E0B1F0B0F14215.jpg" />
+                  <img class="f2" src="../images/girlfriend/B5700F12EB663BCE515C94E2003618F6.jpg" />
+                  <img class="f2" src="../images/girlfriend/B8B6FDEC9808DE65FBD0DC74ACEC2EA2.jpg" />
+                  <img class="f2" src="../images/girlfriend/C366AFDE4A869901917AEB4B3C45C7CF.jpg" />
+                  <img class="f2" src="../images/girlfriend/C4F02A02C4CFBCA30B8A9F46F6C5E933.jpg" />
+                  <img class="f2" src="../images/girlfriend/C9D8F061C88F8002DE3FC2E547C774CE.jpg" />
+                  <img class="f2" src="../images/girlfriend/CD31A65BA3C9A96B959D78D2D4BCB0BC.jpg" />
+                  <!-- 引入图片值页面 -->
+ 
+                  <img class="f3" src="../images/girlfriend/D2CFF85396C2C7B35F4808E2ACE30FC0.jpg" />
+                  <img class="f3" src="../images/girlfriend/D403910ED7E6A127A6260E97235BB81D.jpg" />
+                  <img class="f3" src="../images/girlfriend/D6B9E385CEAF919BFD7A23FA6F86ACC7.jpg" />
+                  <img class="f3" src="../images/girlfriend/D775691B8782B132BF88DBC3F98C6D2B.jpg" />
+                  <img class="f3" src="../images/girlfriend/E00EE7A7391A5F834B08DB677BEF4A37.jpg" />
+                  <img class="f3" src="../images/girlfriend/E5BFC07B501DC97D3A3F5527ED744D92.jpg" />
+                  <img class="f3" src="../images/girlfriend/E88B7F656FCC97E32531BC6615AFE665.jpg" />
+                  <img class="f3" src="../images/girlfriend/EE4DF54ACFA2FDBF3AFC6FB927DD932C.jpg" />
+                  <img class="f3" src="../images/girlfriend/F1EFA1AF5015EB0FBB4E2E87719F3345.jpg" />
+                  <img class="f3" src="../images/girlfriend/F304AEB197EC7CC400CD45287A118065.jpg" />
+ 
+ 
+                  <img class="f3" src="../images/girlfriend/F76C69B3D2D1847DE330C2F10605BBC6.jpg" />
+                  <img class="f3" src="../images/girlfriend/F781F81936DB4567D080A1C2B4C2AC5F.jpg" />
+                  <img class="f3" src="../images/girlfriend/F84DB6D9F1CE237DCCBCC27970787D53.jpg" />
+                  <img class="f3" src="../images/girlfriend/F918016D2A94B8F2CD1CD04DA6185FB0.jpg" />
+ 
+                  <img class="f3" src="../images/girlfriend/FB6C20C475F041B08CF592A926FFC917.jpg" />
+                  <img class="f3" src="../images/girlfriend/FE85D642C54722BE96A56B2FF741F1AF.jpg" />
+                  <img class="f3" src="../images/girlfriend/FEF8A1981CD13302F32C33FD8EDDAD77.jpg" />
+                  <img class="f3" src="../images/girlfriend/3BE4E1F2E64D5B0355D8B09D659ECB22.jpg" />
+ 
+                  <img class="f3" src="../images/girlfriend/FDD0DDCCE2FE2433E8F524BBAEEF8657.jpg" />
+                  <img class="f3" src="../images/girlfriend/5A5EE525985A382BD163319E9EAA2889.jpg" />
+                  <img class="f3" src="../images/girlfriend/210A8A654227A893220D38AD79FACFA0.jpg" />
+                  <img class="f3" src="../images/girlfriend/476BBB03561D2BAEBEAE88D3ECC4A8DE.jpg" />
+                  <img class="f3" src="../images/girlfriend/4C40F514AF5A3B875180D04A1FD1B6C3.jpg" />
+                  <img class="f3" src="../images/girlfriend/F1EFA1AF5015EB0FBB4E2E87719F3345.jpg" />
+                  <img class="f3" src="../images/girlfriend/F897ED63441580322E8D99CEBC02F469.jpg" />
+                  <img class="f3" src="../images/girlfriend/B42FFD7F65128EF4B88D5BDD5D25FE5F.jpg" />
+                  <img class="f3" src="../images/girlfriend/307B780F7FCD8DD66F876176120D6FFC.jpg      " />
+                  <img class="f3" src="../images/girlfriend/3BE4E1F2E64D5B0355D8B09D659ECB22.jpg" />
+                  <img class="f3" src="../images/girlfriend/9AA924ED374191A04671A67E104F5301.jpg" />
+                  <img class="f3" src="../images/girlfriend/9E0AA1F12A6728B4F1EE12ECFD35DB5E.jpg" />
+                  <img class="f3" src="../images/girlfriend/20C6E29063FB71AAACCACD1D0BE0FB3D.jpg" />
+                  <img class="f3" src="../images/girlfriend/073F76D1D24A177919E91F86F1BBCB60.jpg" />
+                  <img class="f3" src="../images/girlfriend/C1697F6F87DBFC0E21E46FE9D5353295.jpg" />
+ 
+ 
+                  <p></p>
+            </div>
+      </div>
+      <!--  src="JS/photo.js" -->
+      <script type="text/javascript">
+            var oImg = document.getElementsByClassName('f1')
+            var oImg2 = document.getElementsByClassName('f2')
+            var oImg3 = document.getElementsByClassName('f3')
+            var len = oImg.length;
+            console.log(len)
+            var deg = 360 / len;
+ 
+            var oWrap = document.getElementById("imgwrap");
+            // var oWrap=document.querySelector('.wrap');
+ 
+            //页面加载完毕在执行的代码
+            window.onload = function () {
+                  Array.prototype.forEach.call(oImg, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  Array.prototype.forEach.call(oImg2, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px) translateY(240px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  Array.prototype.forEach.call(oImg3, function (ele, index, self) {
+                        // 旋转并沿Z轴平移
+                        ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(645.75px) translateY(480px)";
+                        //过渡时间1s
+                        ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  });
+                  // Array.prototype.forEach.call(oImg, function (ele, index, self) {
+                  //       // 旋转并沿Z轴平移
+                  //       ele.style.transform = "rotateY(" + deg * index + "deg) translateZ(350px)";
+                  //       //过渡时间1s
+                  //       ele.style.transition = "1s " + (len - index) * 0.1 + "s";
+ 
+                  // });
+ 
+            }
+            //翻动3D相册
+            var newX, newY, lastX, lastY, minusX, minusY, rotX = -20, rotY = 0;
+ 
+            document.onmousedown = function (e) {
+                  // 点击设置初值
+                  lastX = e.clientX;
+                  lastY = e.clientY;
+ 
+                  this.onmousemove = function (e) {
+                        newX = e.clientX;
+                        newY = e.clientY;
+                        minusX = newX - lastX;
+                        minusY = newY - lastY;
+ 
+                        rotX -= minusY * 0.2;
+                        rotY += minusX * 0.1;
+                        oWrap.style.transform = "rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
+                        lastX = newX;
+                        lastY = newY;
+ 
+                  }
+                  this.onmouseup = function (e) {
+                        //鼠标松开
+                        this.onmousemove = null;//清除鼠标移动
+                  }
+            }
+ 
+      </script>
+</body>
+ 
+</html>
